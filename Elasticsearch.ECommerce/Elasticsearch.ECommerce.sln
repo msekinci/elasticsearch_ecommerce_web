@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Elasticsearch.ECommerce.Web", "Elasticsearch.ECommerce.Web\Elasticsearch.ECommerce.Web.csproj", "{40AA0B1B-B7C5-4BFF-B29D-2CD45C9F666A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{40AA0B1B-B7C5-4BFF-B29D-2CD45C9F666A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40AA0B1B-B7C5-4BFF-B29D-2CD45C9F666A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40AA0B1B-B7C5-4BFF-B29D-2CD45C9F666A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40AA0B1B-B7C5-4BFF-B29D-2CD45C9F666A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
