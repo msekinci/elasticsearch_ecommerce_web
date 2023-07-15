@@ -9,9 +9,17 @@ public class SearchPageViewModel
     public List<ECommerceViewModel> List { get; set; }
     public ECommerceSearchViewModel SearchViewModel { get; set; }
 
-    public string CreatePageUrl(HttpRequest request, int page, int pageSize)
+    public int StartPage() {
+        return Page - 6 <= 0 ? 1 : Page - 6;
+    }
+
+    public long EndPage() {
+        return Page + 6 >= PageLinkCount ? PageLinkCount : Page + 6;
+    }
+
+    public string CreatePageUrl(HttpRequest request, long page, int pageSize)
     {
-        var currentUrl = new Uri($"{request.Scheme}://{request.Path}{request.QueryString}").AbsoluteUri;
+        var currentUrl = new Uri($"{request.Scheme}://{request.Host}{request.Path}{request.QueryString}").AbsoluteUri;
 
         if (currentUrl.Contains("page", StringComparison.OrdinalIgnoreCase))
         {
@@ -21,7 +29,7 @@ public class SearchPageViewModel
         else
         {
             currentUrl = $"{currentUrl}?Page={page}";
-            currentUrl = $"{currentUrl}?PageSize={pageSize}";
+            currentUrl = $"{currentUrl}&PageSize={pageSize}";
         }
 
         return currentUrl;
